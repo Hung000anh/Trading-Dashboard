@@ -51,6 +51,10 @@ width: 100%;
   transition: background-color 0.2s ease;
 }
 
+.timeframe-buttons button:hover {
+  background-color: #e6f0ff;
+}
+
 .timeframe-buttons button.active {
   background-color: #007bff;
   color: white;
@@ -68,6 +72,7 @@ width: 100%;
 
 /* Chart container */
 .chart-container {
+  position: relative;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
@@ -77,4 +82,48 @@ width: 100%;
   position: relative;
   overflow: hidden;
   padding: 0;
+}
+
+.chart-legend {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none; /* để không chặn chuột */
+  user-select: none;
+  color: black;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Range buttons */
+.range-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: left;
+}
+
+.range-buttons button {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.range-buttons button:hover {
+  background-color: #e6f0ff;
+}
+
+.range-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }
