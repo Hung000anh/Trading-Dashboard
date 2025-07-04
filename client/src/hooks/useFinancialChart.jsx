@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { createChart } from "lightweight-charts";
+import { createChart, CrosshairMode } from "lightweight-charts";
 
 export function useFinancialChart({ timeFrame, range, chartType, data }) {
     const chartContainerRef = useRef(null);
@@ -161,6 +161,9 @@ export function useFinancialChart({ timeFrame, range, chartType, data }) {
 
         // Tạo chart
         const chart = createChart(chartContainerRef.current, {
+            crosshair: {
+                mode: CrosshairMode.Normal
+            },
             width: chartContainerRef.current.clientWidth,
             height: chartContainerRef.current.clientHeight,
             layout: { background: { type: "solid", color: bgColor }, textColor: "black" },
@@ -230,6 +233,7 @@ export function useFinancialChart({ timeFrame, range, chartType, data }) {
             mainSeries.setData(filteredData);
         }
 
+        
         // Thêm volume series
         volumeSeriesRef.current = addVolumeSeries(filteredData);
 
