@@ -1,0 +1,163 @@
+/* === RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* === LAYOUT === */
+.calendar-container {
+  padding: 20px;
+}
+
+.calendar-content {
+  display: flex;
+  gap: 24px;
+}
+
+.calendar-table-wrapper {
+  flex: 1;
+}
+
+.calendar-filter {
+  width: 300px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.calendar-filter h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+/* === FILTER GROUP === */
+.filter-group {
+  margin-bottom: 14px;
+}
+
+.filter-group > label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.filter-group input[type="date"],
+.filter-group select {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+/* === IMPACT CHECKBOX === */
+.impact-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.impact-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.impact-icon {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.impact-icon.gray {
+  color: #9ca3af;
+}
+
+.impact-icon.yellow {
+  color: #facc15;
+}
+
+.impact-icon.orange {
+  color: #fb923c;
+}
+
+.impact-icon.red {
+  color: #f87171;
+}
+
+/* === CURRENCY CHECKBOX === */
+.filter-group.currency > label {
+  margin-bottom: 8px;
+}
+
+.currency-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+}
+
+.currency-checkboxes > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.currency-checkboxes input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* === EVENT TYPE CHECKBOX === */
+.filter-group.event-type > label {
+  margin-bottom: 8px;
+}
+
+.event-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+}
+
+.event-checkboxes > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.event-checkboxes input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* === TABLE === */
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-table th,
+.calendar-table td {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.calendar-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.calendar-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
