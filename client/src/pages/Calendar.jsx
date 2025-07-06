@@ -209,7 +209,7 @@ const Calendar = () => {
                     <div className="filter-group currency">
                         <label>Currency</label>
                         <div className="currency-checkboxes">
-                            {["All", ...currencies].map((cur) => (
+                            {[...currencies].map((cur) => (
                                 <div key={cur}>
                                     <input
                                         type="checkbox"
