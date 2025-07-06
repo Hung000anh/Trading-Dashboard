@@ -39,10 +39,10 @@ const Sidebar = () => {
 
             {!collapsed && (
                 <>
-                    <div className="logo">
+                    <Link to="/" className="logo">
                         <img src={logo} alt="Logo" />
-                        <h2>Người hèn</h2>
-                    </div>
+                        <h2>Trading Hub</h2>
+                    </Link>
                     <div className="menu">
                         {/* Products */}
                         <div className="submenu">
