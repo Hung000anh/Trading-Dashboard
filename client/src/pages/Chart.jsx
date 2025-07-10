@@ -30,7 +30,7 @@ const Chart = () => {
     timeFrame,
     range,
     chartType,
-    data: allData,
+    data: allData, 
   });
 
   return (
